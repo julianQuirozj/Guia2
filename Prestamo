@@ -1,0 +1,71 @@
+package guia_2;
+import javax.swing.JOptionPane;
+public class Prestamo {
+    
+     
+    public String toString() {
+    return "Prestamo{" + "idPrestamo =" + idPrestamo + ", idLibro =" + idLibro + ", codigoEstudiante =" + codigoEstudiante + ", fechaDevolucion=" + fechaDevolucion + ", fechaPrestamo=" + fechaPrestamo + '}';
+}
+    private String idPrestamo;
+    private String idLibro ;
+    private String codigoEstudiante;
+    private String fechaDevolucion ;
+    private String fechaPrestamo;
+
+ public Prestamo(String idPrestamo,String idLibro,String codigoEstudiante,String fechaDevolucion,String fechaPrestamo) {
+        this.idPrestamo = idPrestamo;
+        this.idLibro = idLibro;
+        this.codigoEstudiante = codigoEstudiante;
+        this.fechaDevolucion = fechaDevolucion;
+        this.fechaPrestamo = fechaPrestamo;
+}
+
+    public Prestamo(){
+        this.idPrestamo = JOptionPane.showInputDialog("Digite el prestamo");
+        this.idLibro = JOptionPane.showInputDialog("Digite el nombre del libro");
+        this.codigoEstudiante = JOptionPane.showInputDialog("Digite codigo de estudiante");
+        this.fechaDevolucion = JOptionPane.showInputDialog("Digite fecha de devolucion");
+        this.fechaPrestamo = JOptionPane.showInputDialog("Digite la fecha del prestamo");
+    }
+
+    public String getIdPrestamo() {
+        return idPrestamo;
+    }
+
+    public void setIdPrestamo(String idPrestamo) {
+        this.idPrestamo = idPrestamo;
+    }
+
+    public String getIdLibro() {
+        return idLibro;
+    }
+
+    public void setIdLibro(String idLibro) {
+        this.idLibro = idLibro;
+    }
+
+    public String getCodigoEstudiante() {
+        return codigoEstudiante;
+    }
+
+    public void setCodigoEstudiante(String codigoEstudiante) {
+        this.codigoEstudiante = codigoEstudiante;
+    }
+
+    public String getFechaDevolucion() {
+        return fechaDevolucion;
+    }
+
+    public void setFechaDevolucion(String fechaDevolucion) {
+        this.fechaDevolucion = fechaDevolucion;
+    }
+
+    public String getFechaPrestamo() {
+        return fechaPrestamo;
+    }
+
+    public void setFechaPrestamo(String fechaPrestamo) {
+        this.fechaPrestamo = fechaPrestamo;
+    }
+    
+}
