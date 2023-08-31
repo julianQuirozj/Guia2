@@ -1,0 +1,72 @@
+package guia_2;
+import javax.swing.JOptionPane;
+public class Estudiante {
+      
+        @Override
+    public String toString() {
+    return "Estudiante{" + ", codigoEstudiante = " + codigoEstudiante + ", nombre =" + nombre + ", apellidos = " + apellidos + ", correo =" + correo + ", celular =" + celular +'}';
+
+   }
+    private int codigoEstudiante;
+    private String nombre ;
+    private String apellidos;
+    private String correo ;
+    private String celular;
+    
+    public Estudiante(int codigoestudiante ,String nombre ,String apellidos ,String correo ,String celular) {
+         this.codigoEstudiante = codigoestudiante;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.correo = correo;
+        this.celular = celular;
+        }
+    public Estudiante(){
+        int txtcodigoEstudiante=0;
+        String txtCodigo;
+        txtCodigo = JOptionPane.showInputDialog("Digite código");
+        txtcodigoEstudiante = Integer.parseInt(txtCodigo);
+        this.codigoEstudiante = iCodigoEstudiante;
+        this.nombre = JOptionPane.showInputDialog("Digite su nombre");
+        this.apellidos = JOptionPane.showInputDialog("Digite su apellido");
+        this.correo = JOptionPane.showInputDialog("Digite el correo");
+        this.celular = JOptionPane.showInputDialog("Digite el numero de celular");
+         }
+    public int getCodigoestudiante() {
+        return codigoEstudiante;
+    }
+
+    public void setCodigoestudiante(int codigoestudiante) {
+        this.codigoEstudiante = codigoestudiante;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getCelular() {
+        return celular;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }} 
