@@ -1,0 +1,38 @@
+package guia_2;
+import java.util.Scanner;
+import java.util.Hashtable;
+import javax.swing.JOptionPane;
+public class Bibliotecta {
+    private int nroEjemplares=0;
+    private String nombreColegio; 
+    private String Direccion, isbn, tit, aut;
+    private Hashtable estanteria;
+    private Scanner lector;
+    public Bibliotecta() {
+        lector = new Scanner(System.in);
+        estanteria= new Hashtable();
+        try{
+            for(nroEjemplares=0; nroEjemplares<3;nroEjemplares++){
+                estanteria.put(nroEjemplares, new Libro(nroEjemplares));
+            }
+        }catch(ArrayIndexOutOfBoundsException ex){
+            System.out.println("Error en adición de libro");
+        }
+    }
+    public void generarReporte(){
+        Libro tempoLibro;
+        String Aux=" ";
+        for(int posicion=0; posicion<3;posicion++){
+            tempoLibro = (Libro) estanteria.get(posicion);
+            Aux= Aux+tempoLibro.getIdLibro()+" - "+ tempoLibro.getISBN()+" -  "+
+                 tempoLibro.getAutor()+" - "+tempoLibro.getTitulo()+"\n";
+        }
+        JOptionPane.showMessageDialog(null, Aux,
+                "Digite los Datos del Libro", JOptionPane.INFORMATION_MESSAGE);     
+    }
+    public static void main(String[] args) {
+        Bibliotecta solucion = new Bibliotecta();
+        solucion.generarReporte();
+    }
+    
+}
