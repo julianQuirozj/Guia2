@@ -1,0 +1,53 @@
+package guia_2;
+import javax.swing.JOptionPane;
+public class Libro {
+    private String ISBN, titulo, autor;
+    private int idLibro;  
+    public Libro(int id) {
+        this.setIdLibro(id);
+        this.setISBN(JOptionPane.showInputDialog(null, "Digite ISBN:",
+                "Digite los Datos del Libro", JOptionPane.QUESTION_MESSAGE));
+        this.setTitulo(JOptionPane.showInputDialog(null, "Digite Titulo:",
+                "Digite los Datos del Libro", JOptionPane.QUESTION_MESSAGE));
+        this.setAutor(JOptionPane.showInputDialog(null, "Digite Autor:",
+                "Digite los Datos del Libro", JOptionPane.QUESTION_MESSAGE));
+    }
+    public Libro(String is, String ti, String au) {
+        this.ISBN = is;
+        this.titulo = ti;
+        this.autor = au;
+    }
+    public int getIdLibro() {
+        return idLibro;
+    }
+    public void setIdLibro(int idLibro) {
+        this.idLibro = idLibro;
+    }
+    public String getISBN() {
+        return ISBN;
+    }
+
+    public void setISBN(String ISBN) {
+        this.ISBN = ISBN;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        //this.autor = this.titulo+ this.autor;
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+    public void editarCampos(String titulo, String autor) {
+
+    }
+}
